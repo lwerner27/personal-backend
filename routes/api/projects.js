@@ -17,3 +17,5 @@ router.post('/newproject', passport.authenticate('jwt', {
         });
     }
 });
+
+module.exports = router
