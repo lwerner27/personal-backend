@@ -9,7 +9,7 @@ router.post('/newproject', passport.authenticate('jwt', {
 }), (req, res) => {
     const token = getToken(req.headers);
     if (token) {
-        db.Project.findOneOrCreate(req, res);
+        db.Project.createProject(req, res);
     } else {
         return res.status(403).send({
             success: false,
@@ -17,5 +17,18 @@ router.post('/newproject', passport.authenticate('jwt', {
         });
     }
 });
+
+getToken = function (headers) {
+    if (headers && headers.authorization) {
+        let parted = headers.authorization.split(' ');
+        if (parted.length === 2) {
+            return parted[1];
+        } else {
+            return null;
+        }
+    } else {
+        return null;
+    }
+};
 
 module.exports = router
