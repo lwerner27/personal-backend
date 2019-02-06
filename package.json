@@ -17,11 +17,16 @@
   },
   "homepage": "https://github.com/lwerner27/personal-backend#readme",
   "dependencies": {
+<<<<<<< HEAD
     "bcrypt": "^3.0.3",
     "bcrypt-nodejs": "0.0.3",
     "express": "^4.16.4",
     "mongoose": "^5.4.10",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0"
+=======
+    "express": "^4.16.4",
+    "mongoose": "^5.4.10"
+>>>>>>> 0406b726860352f0a51c13301177fb374f116da5
   }
 }
